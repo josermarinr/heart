@@ -1,0 +1,279 @@
+body 
+{
+    margin-left: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    padding: 100px;
+    z-index: 1;
+    overflow: hidden;
+}
+/*  ** **
+   *******
+   *******
+   *******
+    *****
+     ***
+      * 
+*/
+.corazon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #e54a27;
+    transform: rotate(45deg) translate(10px,10px);
+    animation: animationHeart 1s ease-in-out infinite;
+   left:20%;
+    z-index: 3;
+}
+.corazon::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #e54a27;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    border-radius: 50%;
+    z-index: -1;
+}
+.corazon:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #e54a27;
+    position: absolute;
+    bottom: 0%;
+    right: 50%;
+    border-radius: 50%;
+    z-index: -1;
+}
+@keyframes animationHeart {
+    0%
+    {
+        
+        transform: rotate(45deg) translate(10px,10px) scale(1);
+    }
+    25%
+    {
+      
+        transform: rotate(45deg) translate(10px,10px) scale(1);
+    }
+    30%
+    {
+        
+        transform: rotate(45deg) translate(10px,10px) scale(1.4);
+    }
+   
+    50%
+    {
+        
+        transform: rotate(45deg) translate(10px,10px) scale(1.2);
+    }
+    
+    75%
+    {
+        
+        transform: rotate(45deg) translate(10px,10px) scale(1.4);
+    }
+    90%
+    {
+        transform: rotate(45deg) translate(10px,10px) scale(1);
+    }
+    
+    100%
+    {
+        
+        transform: rotate(45deg) translate(10px,10px) scale(1);
+    }
+}
+
+.corazonBg{
+    position: relative;
+    top: 40vh;
+    left: 45vw;
+    transform-origin: center;
+    width: 200px;
+    height: 200px;
+    background: #ee6661;
+    transform: rotate(45deg) ;
+    z-index: -3;
+    animation: big 3s linear infinite;
+}
+.corazonBg::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #ee6661;
+    position: absolute;
+    top: -50%;
+    left: 0;
+    border-radius: 50%;
+    z-index: -1;
+    animation: big1 3s linear infinite;
+}
+.corazonBg:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #ee6661;
+    position: absolute;
+    bottom: 0%;
+    right: 50%;
+    border-radius: 50%;
+    z-index: -1;
+    animation: big1 3s linear infinite;
+}
+@keyframes big1 {
+    
+    33%{
+        
+        background: #db463a;
+    }
+    
+    
+    66%{
+        
+   
+        background: #af2f26;
+    }
+    
+    
+    99%{
+        
+        background: #ee6661;
+    }
+    
+}
+@keyframes big {
+    0%{
+        transform: rotate(45deg) scale(1);
+    }
+    33%{
+        transform: rotate(45deg) scale(15);
+        background: #db463a;
+    }
+    35%{
+        transform: rotate(45deg) scale(1);
+        
+    }
+    
+    66%{
+        
+        transform: rotate(45deg) scale(15);
+        background: #af2f26;
+    }
+    68%{
+        
+        transform: rotate(45deg) scale(1);
+    }
+    99%{
+        transform: rotate(45deg) scale(15);
+        background: #ee6661;
+    }
+    100%{
+        
+    }
+}
+.face{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+
+}
+.eyeL{
+    width: 35px;
+    height: 10%;
+    background: transparent;
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    border-radius: 50%;
+    z-index: 20;
+    box-shadow: 0px -10px #474747;
+    animation: faceanima 1s linear infinite;
+   
+}
+.eyeR{
+    width: 35px;
+    height: 10%;
+    background: transparent;
+    position: absolute;
+    top: 45%;
+    left: 65%;
+    border-radius: 50%;
+    z-index: 20;
+    box-shadow: 0px -10px #474747; 
+    animation: faceanima 1s linear infinite;
+}
+.eyeR:before{
+    content:'';
+    width: 100%;
+    height: 50%;
+    background: #ffffff83;
+    transform: rotate(45deg);
+    position: absolute;
+    top: -90%;
+    left: 70%;
+    border-radius: 50%;
+    mix-blend-mode: multiply;
+}
+
+.mouth{
+    width: 35px;
+    height: 10%;
+    background: transparent;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    border-radius: 50%;
+    z-index: 20;
+    box-shadow: 0px 10px #474747; 
+    animation: faceanima 1s linear infinite;
+}
+
+@keyframes faceanima {
+    0%
+    {
+        
+        transform: scale(1);
+    }
+    25%
+    {
+      
+        transform: scale(1);
+    }
+    30%
+    {
+        
+        transform: scale(1.5);
+    }
+   
+    50%
+    {
+        
+        transform: scale(1.2);
+    }
+    
+    75%
+    {
+        
+        transform: scale(1.5);
+    }
+    90%
+    {
+        transform: scale(1);
+    }
+    
+    100%
+    {
+        
+        transform: scale(1);
+    }
+}
